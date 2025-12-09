@@ -1,0 +1,22 @@
+theme = "gruber-darker"
+[editor.lsp]
+auto-signature-help=false
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+[editor.indent-guides]
+character = "╏"
+rainbow-indent = "normal"
+render = true
+[editor]
+rulers = [120]
+bufferline = "multiple"
+end-of-line-diagnostics = "hint"
+line-number = "relative"
+completion-timeout = 5
+cursorline = true
+[editor.inline-diagnostics]
+cursor-line="hint"
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
