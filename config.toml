@@ -20,3 +20,90 @@ cursor-line="hint"
 insert = "bar"
 normal = "block"
 select = "underline"
+# ~/.config/helix/config.toml
+# [keys.normal]
+# C-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
+# ~/.config/helix/config.toml
+[keys.normal.space.e]
+E = ":sh \"zellij run -c -f -x 1%% -y 1%% --width 98%% --height 98%% -- bash ~/.config/helix/yazi-picker.sh open\""
+e = ":sh \"zellij run -c -f -x 1%% -y 1%% --width 98%% --height 98%% -- bash ~/.config/helix/yazi-picker.sh open %{buffer_name}\""
+# e = [
+#   ':sh rm -f /tmp/unique-file',
+#   ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+#   ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+#   ':open %sh{cat /tmp/unique-file}',
+#   ':redraw',
+# ]
+# # Open the file(s) in a vertical split
+# # v = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/yazi-picker.sh vsplit"
+# v = [
+#   ':sh rm -f /tmp/unique-file',
+#   ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+#   ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+#   ':vsplit %sh{cat /tmp/unique-file}',
+#   ':redraw',
+# ]
+# Open the file(s) in a horizontal split
+# h = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/yazi-picker.sh hsplit"
+# h = [
+#   ':sh rm -f /tmp/unique-file',
+#   ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+#   ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+#   ':hsplit %sh{cat /tmp/unique-file}',
+#   ':redraw',
+# ]
+# e = ":sh zellij run -c -f -x 1%% -y 1%% --width 98%% --height 98%% -- bash ~/dart_filetree/dart_filetree_picker.sh open %{buffer_name}"
+[keys.normal.space.u.a.i.g]
+r = ":sh zellij action new-pane -c --direction right -- gemini"
+f = ":sh zellij run -c -f -x 10%% -y 10%%  --width 80%% --height 80%% -- gemini"
+[keys.normal.space.u.a.i.o]
+r = ":sh zellij action new-pane -c --direction right -- opencode"
+f = ":sh zellij run -c -f -x 10%% -y 10%%  --width 80%% --height 80%% -- opencode"
+ 
+[keys.normal.space.u.r]
+# Open Errors Current Error
+d = [
+  "diagnostics_picker",
+  ":sh zellij action write-chars '%%severity error'"
+]
+# # Open Errors Current Error
+D = [
+  "workspace_diagnostics_picker",
+  ":sh zellij action write-chars '%%severity error'"
+]
+
+
+# Run fvm flutter build_runner build -d
+g = ":sh zellij run -c -f -x 1%% -y 1%%  --width 100%% --height 100%% -- fvm dart run build_runner build -d"
+
+# Open the file(s) in the current window
+# y = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/yazi-picker.sh open"
+ 
+# Open lazygit
+l = ":sh zellij run -c -f -x 1%% -y 1%%  --width 100%% --height 100%% -- lazygit"
+
+# Open in Xcode
+x = ":sh open -a Xcode ./ios/"
+
+# Open in Android Studio Studio
+a = ":sh open -a 'Android Studio' ./android/"
+
+# Flutter Build Android
+b = ":sh zellij action new-pane -c --direction down --height 5 -- ~/flutterbuild.sh"
+
+# Flutter Run
+r = ':sh zellij action new-tab --layout flutterrun'
+
+# Flutter Hotreload
+h = ":sh zellij action new-pane -c --direction down -- ~/hotreload.sh"
+
+[keys.normal.space.u.s]
+
+# Run Android Emulator
+a = ":sh zellij run -c -f -x 1%% -y 1%%  --width 100%% --height 100%% -- ~/runandsim.sh"
+
+# Run iOS Simulator
+i = ":sh zellij run -c -f -x 1%% -y 1%%  --width 100%% --height 100%% -- ~/runiossim.sh"
+
+[keys.normal.space]
+K = ["vsplit","goto_definition"]
